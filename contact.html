@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Contact Haidri Studio to discuss wedding photography, cinematic films and event bookings.">
+
+  <title>Contact Us | Haidri Studio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #080808;
+      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact-page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 6%;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .contact-page .eyebrow {
+      color: #aaa;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .contact-page h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin: 22px 0;
+    }
+
+    .contact-page h1 span {
+      color: #888;
+    }
+
+    .contact-intro {
+      color: #aaa;
+      line-height: 1.9;
+      max-width: 480px;
+    }
+
+    .contact-details {
+      margin-top: 40px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .contact-detail {
+      border-top: 1px solid #303030;
+      padding-top: 18px;
+    }
+
+    .contact-detail span {
+      display: block;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .contact-detail a,
+    .contact-detail p {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .booking-form {
+      background: #111;
+      border: 1px solid #303030;
+      padding: 32px;
+    }
+
+    .booking-form h2 {
+      font-size: 27px;
+      margin: 0 0 10px;
+    }
+
+    .form-description {
+      color: #999;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .booking-form label {
+      display: block;
+      color: #ddd;
+      font-size: 13px;
+      margin: 20px 0 9px;
+    }
+
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #383838;
+      background: #090909;
+      color: #fff;
+      font: inherit;
+      font-size: 14px;
+      border-radius: 0;
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus,
+    .booking-form textarea:focus {
+      outline: 1px solid #aaa;
+    }
+
+    .booking-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .booking-button {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      padding: 16px;
+      background: #f5f5f5;
+      color: #080808;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .booking-button:hover {
+      background: #ccc;
+    }
+
+    .form-note {
+      color: #888;
+      font-size: 12px;
+      line-height: 1.7;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 750px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-page {
+        padding-top: 55px;
+      }
+
+      .booking-form {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      HS<span>.</span> <small>HAIDRI STUDIO</small>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+
+    <div class="contact-layout">
+
+      <section>
+        <p class="eyebrow">HAIDRI STUDIO · GET IN TOUCH</p>
+
+        <h1>
+          Let's make<br>
+          <span>memories together.</span>
+        </h1>
+
+        <p class="contact-intro">
+          Planning your wedding or a special event?
+          Tell us about your plans. We'd love to discuss
+          your photography and cinematic film requirements.
+        </p>
+
+        <div class="contact-details">
+
+          <div class="contact-detail">
+            <span>PHONE / WHATSAPP</span>
+            <a href="https://wa.me/923074120607"
+               target="_blank"
+               rel="noopener noreferrer">
+              +92 307 4120607 ↗
+            </a>
+          </div>
+
+          <div class="contact-detail">
+            <span>PHOTOGRAPHY & FILMS</span>
+            <p>Wedding Photography · Cinematic Films · Event Coverage</p>
+          </div>
+
+          <div class="contact-detail">
+            <span>SERVICE AREA</span>
+            <p>Punjab, Pakistan</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="booking-form">
+
+        <h2>Tell us about your event.</h2>
+
+        <p class="form-description">
+          Complete the details below to start your booking enquiry.
+        </p>
+
+        <form id="bookingForm">
+
+          <label for="fullName">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your full name"
+            required
+          >
+
+          <label for="phone">Phone / WhatsApp Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+92 ..."
+            required
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+          >
+
+          <label for="service">What would you like to book?</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Wedding Photography</option>
+            <option>Wedding Films & Cinematography</option>
+            <option>Wedding & Event Coverage</option>
+            <option>Wedding Albums & Editing</option>
+            <option>Other</option>
+          </select>
+
+          <label for="eventDate">Event Date</label>
+          <input
+            type="date"
+            id="eventDate"
+            name="eventDate"
+          >
+
+          <label for="message">Tell us more about your event</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Event location, dates and any special requirements..."
+          ></textarea>
+
+          <button type="submit" class="booking-button">
+            Send Booking Enquiry ↗
+          </button>
+
+          <p class="form-note">
+            This form opens WhatsApp with your enquiry details.
+            Review the message and press Send in WhatsApp to submit it.
+          </p>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("eventDate").value;
+      const message = document.getElementById("message").value.trim();
+
+      const enquiry =
+        "Hello Haidri Studio! I would like to make a booking enquiry.\n\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Email: " + (email || "Not provided") + "\n" +
+        "Service: " + service + "\n" +
+        "Event Date: " + (date || "Not decided") + "\n" +
+        "Details: " + (message || "Not provided");
+
+      const whatsappURL =
+        "https://wa.me/923074120607?text=" + encodeURIComponent(enquiry);
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    });
+  </script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+
+      <!-- Studio Information -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          HS<span>.</span> HAIDRI STUDIO
+        </a>
+
+        <p>
+          We capture the beauty, emotions and unforgettable
+          moments of your wedding through photography and
+          cinematic films.
+        </p>
+      </div>
+
+      <!-- Explore Links -->
+      <div class="footer-column">
+        <h3>EXPLORE</h3>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-column">
+        <h3>OUR SERVICES</h3>
+        <a href="services.html">Wedding Photography</a>
+        <a href="services.html">Cinematic Films</a>
+        <a href="services.html">Event Coverage</a>
+        <a href="services.html">Albums &amp; Editing</a>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+
+        <a href="tel:+923074120607">
+          +92 307 4120607
+        </a>
+
+        <a href="https://wa.me/923074120607"
+           target="_blank"
+           rel="noopener noreferrer">
+          WhatsApp
+        </a>
+
+        <p class="footer-address">
+          Punjab, Pakistan
+        </p>
+
+        <a href="mailto:info.haidristudio@gmail.com">
+          info.haidristudio@gmail.com
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>
+        © 2026 Haidri Studio. All rights reserved.
+      </p>
+
+      <p class="footer-designed">
+       "Developed by <strong>AHM</strong>"
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

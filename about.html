@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Haidri Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #090909;
+      color: #f5f5f5;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Navigation */
+    header {
+      min-height: 85px;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #292929;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px;
+      letter-spacing: 3px;
+      line-height: 1.3;
+    }
+
+    .logo span {
+      display: block;
+      margin-top: 5px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #999;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #bbb;
+      font-size: 14px;
+      transition: color .3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #fff;
+    }
+
+    .nav-btn {
+      border: 1px solid #777;
+      padding: 10px 18px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+
+    /* About hero */
+    .hero {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      background:
+        linear-gradient(90deg, #090909 15%, #090909bb),
+        url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=85')
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .eyebrow {
+      color: #aaa;
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-bottom: 22px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin-top: 22px;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    /* About story */
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+      padding: 85px 8%;
+    }
+
+    .story img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      border-radius: 5px;
+    }
+
+    .story h2 {
+      font-size: clamp(32px, 4vw, 45px);
+      margin-bottom: 22px;
+    }
+
+    .story p {
+      color: #aaa;
+      margin-bottom: 18px;
+    }
+
+    .story-link {
+      display: inline-block;
+      margin-top: 12px;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 5px;
+    }
+
+    /* Booking section */
+    .booking-section {
+      padding: 85px 20px;
+      background: #101010;
+      border-top: 1px solid #292929;
+    }
+
+    .booking-heading {
+      max-width: 650px;
+      text-align: center;
+      margin: 0 auto 38px;
+    }
+
+    .booking-heading h2 {
+      font-size: clamp(34px, 5vw, 48px);
+      margin: 15px 0;
+    }
+
+    .booking-heading p {
+      color: #aaa;
+    }
+
+    .booking-form {
+      max-width: 650px;
+      margin: auto;
+      padding: 32px;
+      border: 1px solid #333;
+      border-radius: 7px;
+      background: #0a0a0a;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .booking-form label {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 14px;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 15px;
+      background: #111;
+      color: #fff;
+      border: 1px solid #383838;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .booking-form input:focus,
+    .booking-form select:focus {
+      border-color: #bbb;
+    }
+
+    .booking-form input::placeholder {
+      color: #777;
+    }
+
+    .booking-form select option {
+      background: #111;
+      color: #fff;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: #f5f5f5;
+      color: #111;
+      border: 1px solid #f5f5f5;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .submit-btn:hover {
+      background: #ccc;
+    }
+
+    .form-note {
+      color: #888;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      border-top: 1px solid #292929;
+      color: #999;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        padding: 20px 5%;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 55px 6%;
+      }
+
+      .story img {
+        height: 330px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .logo {
+        font-size: 21px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      .booking-form {
+        padding: 22px 17px;
+      }
+
+      .booking-section {
+        padding: 55px 15px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      HAIDRI STUDIO
+      <span>CAPTURING YOUR SPECIAL MOMENTS</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="#booking" class="nav-btn">Book Now ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">GET TO KNOW US ━━━</div>
+
+        <h1>Every Moment Has a Story.</h1>
+
+        <p>
+          At Haidri Studio, we capture meaningful moments
+          through professional photography, cinematic films
+          and creative storytelling.
+        </p>
+      </div>
+    </section>
+
+    <section class="story">
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+          alt="Wedding photography and special moments"
+          loading="lazy"
+        >
+      </div>
+
+      <div>
+        <div class="eyebrow">OUR STORY ━━━</div>
+
+        <h2>Creating Memories That Last Forever</h2>
+
+        <p>
+          We believe every celebration is unique.
+          Our goal is to preserve your important moments
+          with creativity, attention to detail and care.
+        </p>
+
+        <p>
+          From wedding photography to cinematic films,
+          we work to turn your memories into something
+          you can cherish for years to come.
+        </p>
+
+        <a href="#booking" class="story-link">
+          Let's plan your event →
+        </a>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-heading">
+        <div class="eyebrow">LET'S WORK TOGETHER ━━━</div>
+
+        <h2>Book Your Experience</h2>
+
+        <p>
+          Tell us about your occasion and the service
+          you need. We'll get in touch with you.
+        </p>
+      </div>
+
+      <form class="booking-form"
+            action="https://formsubmit.co/YOUR_EMAIL@example.com"
+            method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New Haidri Studio Booking Request">
+
+        <div class="form-group">
+          <label for="full-name">Full Name *</label>
+
+          <input type="text" id="full-name"
+                 name="Full Name"
+                 placeholder="Enter your full name"
+                 autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone or WhatsApp Number *</label>
+
+          <input type="tel" id="phone"
+                 name="Phone or WhatsApp Number"
+                 placeholder="+92 3XX XXXXXXX"
+                 autocomplete="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+
+          <input type="email" id="email"
+                 name="Email Address"
+                 placeholder="you@example.com"
+                 autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-type">
+            What would you like to book? *
+          </label>
+
+          <select id="booking-type"
+                  name="Booking Service" required>
+
+            <option value="" disabled selected>
+              Select a service
+            </option>
+
+            <option value="Wedding Photography">
+              Wedding Photography
+            </option>
+
+            <option value="Wedding Films and Cinematography">
+              Wedding Films &amp; Cinematography
+            </option>
+
+            <option value="Wedding and Event Coverage">
+              Wedding &amp; Event Coverage
+            </option>
+
+            <option value="Wedding Albums and Editing">
+              Wedding Albums &amp; Editing
+            </option>
+
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Booking Request →
+        </button>
+
+        <p class="form-note">
+          * Required fields. Your information will be used
+          to respond to your booking enquiry.
+        </p>
+      </form>
+    </section>
+  </main>
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+
+      <!-- Studio Information -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          HS<span>.</span> HAIDRI STUDIO
+        </a>
+
+        <p>
+          We capture the beauty, emotions and unforgettable
+          moments of your wedding through photography and
+          cinematic films.
+        </p>
+      </div>
+
+      <!-- Explore Links -->
+      <div class="footer-column">
+        <h3>EXPLORE</h3>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- Services -->
+      <div class="footer-column">
+        <h3>OUR SERVICES</h3>
+        <a href="services.html">Wedding Photography</a>
+        <a href="services.html">Cinematic Films</a>
+        <a href="services.html">Event Coverage</a>
+        <a href="services.html">Albums &amp; Editing</a>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="footer-column">
+        <h3>CONTACT</h3>
+
+        <a href="tel:+923074120607">
+          +92 307 4120607
+        </a>
+
+        <a href="https://wa.me/923074120607"
+           target="_blank"
+           rel="noopener noreferrer">
+          WhatsApp
+        </a>
+
+        <p class="footer-address">
+          Punjab, Pakistan
+        </p>
+
+        <a href="mailto:info.haidristudio@gmail.com">
+          info.haidristudio@gmail.com
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>
+        © 2026 Haidri Studio. All rights reserved.
+      </p>
+
+
+      <p class="footer-designed">
+        "Developed by <strong>AHM</strong>"
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
