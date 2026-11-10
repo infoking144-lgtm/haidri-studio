@@ -2,542 +2,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Haidri Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Learn about Haidri Studio, our passion for wedding photography, cinematic films and capturing unforgettable moments.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <title>About Us | Haidri Studio</title>
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    body {
-      background: #090909;
-      color: #f5f5f5;
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.7;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    <style>
+        .about-page {
+            background: #f8f6f6;
+            color: #0b0b0b;
+            font-family: 'DM Sans', sans-serif;
+        }
 
-    /* Navigation */
-    header {
-      min-height: 85px;
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #292929;
-    }
+        .about-page * {
+            box-sizing: border-box;
+        }
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 25px;
-      letter-spacing: 3px;
-      line-height: 1.3;
-    }
+        .about-container {
+            width: min(1180px, 90%);
+            margin: auto;
+        }
 
-    .logo span {
-      display: block;
-      margin-top: 5px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px;
-      letter-spacing: 2px;
-      color: #999;
-    }
+        .about-hero {
+            min-height: 540px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(240, 238, 238, 0.65), rgba(0,0,0,.85)),
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85') center/cover;
+            padding: 100px 20px;
+        }
 
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
+        .about-hero-content {
+            max-width: 850px;
+            margin: auto;
+        }
 
-    nav a {
-      color: #bbb;
-      font-size: 14px;
-      transition: color .3s;
-    }
+        .about-label {
+            color: #f47721;
+            font-size: 13px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
 
-    nav a:hover,
-    nav a.active {
-      color: #fff;
-    }
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 8vw, 90px);
+            line-height: 1.1;
+            margin: 22px 0;
+        }
 
-    .nav-btn {
-      border: 1px solid #777;
-      padding: 10px 18px;
-      border-radius: 30px;
-      white-space: nowrap;
-    }
+        .about-hero h1 span {
+            color: #f47721;
+        }
 
-    /* About hero */
-    .hero {
-      min-height: 420px;
-      display: flex;
-      align-items: center;
-      padding: 80px 8%;
-      background:
-        linear-gradient(90deg, #090909 15%, #090909bb),
-        url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1800&q=85')
-        center/cover;
-    }
+        .about-hero p {
+            color: #efeeee;
+            font-size: 17px;
+            line-height: 1.9;
+            max-width: 680px;
+            margin: auto;
+        }
 
-    .hero-content {
-      max-width: 780px;
-    }
+        .about-story {
+            padding: 110px 0;
+        }
 
-    .eyebrow {
-      color: #aaa;
-      font-size: 12px;
-      letter-spacing: 4px;
-      margin-bottom: 22px;
-    }
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 75px;
+            align-items: center;
+        }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 400;
-      line-height: 1.25;
-    }
+        .about-story-image {
+            min-height: 520px;
+            background:
+                url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85') center/cover;
+            position: relative;
+        }
 
-    h1 {
-      font-size: clamp(40px, 6vw, 68px);
-    }
+        .about-experience {
+            position: absolute;
+            bottom: 25px;
+            right: -20px;
+            background: #f47721;
+            padding: 25px 30px;
+            color: #f9f5f5;
+        }
 
-    .hero p {
-      max-width: 650px;
-      margin-top: 22px;
-      color: #ccc;
-      font-size: 16px;
-    }
+        .about-experience strong {
+            display: block;
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+        }
 
-    /* About story */
-    .story {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 55px;
-      padding: 85px 8%;
-    }
+        .about-experience span {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    .story img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      filter: grayscale(100%);
-      border-radius: 5px;
-    }
+        .about-story-text h2,
+        .about-mission h2,
+        .about-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.2;
+            margin: 18px 0 25px;
+        }
 
-    .story h2 {
-      font-size: clamp(32px, 4vw, 45px);
-      margin-bottom: 22px;
-    }
+        .about-story-text h2 span,
+        .about-mission h2 span {
+            color: #f47721;
+        }
 
-    .story p {
-      color: #aaa;
-      margin-bottom: 18px;
-    }
+        .about-story-text p,
+        .about-mission p {
+            color: #7d7979;
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 18px;
+        }
 
-    .story-link {
-      display: inline-block;
-      margin-top: 12px;
-      border-bottom: 1px solid #aaa;
-      padding-bottom: 5px;
-    }
+        .about-mission {
+            padding: 100px 0;
+            background: #e8e6e6;
+            text-align: center;
+        }
 
-    /* Booking section */
-    .booking-section {
-      padding: 85px 20px;
-      background: #101010;
-      border-top: 1px solid #292929;
-    }
+        .about-mission-content {
+            max-width: 800px;
+            margin: auto;
+        }
 
-    .booking-heading {
-      max-width: 650px;
-      text-align: center;
-      margin: 0 auto 38px;
-    }
+        .about-values {
+            padding: 110px 0;
+        }
 
-    .booking-heading h2 {
-      font-size: clamp(34px, 5vw, 48px);
-      margin: 15px 0;
-    }
+        .about-section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
 
-    .booking-heading p {
-      color: #aaa;
-    }
+        .about-section-heading h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(35px, 5vw, 55px);
+            margin: 15px 0;
+        }
 
-    .booking-form {
-      max-width: 650px;
-      margin: auto;
-      padding: 32px;
-      border: 1px solid #333;
-      border-radius: 7px;
-      background: #0a0a0a;
-    }
+        .about-section-heading p {
+            color: #999;
+            line-height: 1.8;
+        }
 
-    .form-group {
-      margin-bottom: 24px;
-    }
+        .about-values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-    .booking-form label {
-      display: block;
-      margin-bottom: 9px;
-      font-size: 14px;
-    }
+        .about-value-card {
+            border: 1px solid #292929;
+            background: #101010;
+            padding: 38px 30px;
+            transition: .3s ease;
+        }
 
-    .booking-form input,
-    .booking-form select {
-      width: 100%;
-      padding: 15px;
-      background: #111;
-      color: #fff;
-      border: 1px solid #383838;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 14px;
-      outline: none;
-    }
+        .about-value-card:hover {
+            border-color: #f47721;
+            transform: translateY(-7px);
+        }
 
-    .booking-form input:focus,
-    .booking-form select:focus {
-      border-color: #bbb;
-    }
+        .about-value-card .number {
+            color: #f47721;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
 
-    .booking-form input::placeholder {
-      color: #777;
-    }
+        .about-value-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            margin: 22px 0 15px;
+        }
 
-    .booking-form select option {
-      background: #111;
-      color: #fff;
-    }
+        .about-value-card p {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.9;
+        }
 
-    .submit-btn {
-      width: 100%;
-      padding: 16px;
-      background: #f5f5f5;
-      color: #111;
-      border: 1px solid #f5f5f5;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: .3s;
-    }
+        .about-cta {
+            padding: 100px 20px;
+            text-align: center;
+            background: #f47721;
+            color: #080808;
+        }
 
-    .submit-btn:hover {
-      background: #ccc;
-    }
+        .about-cta .about-label {
+            color: #080808;
+        }
 
-    .form-note {
-      color: #888;
-      font-size: 12px;
-      margin-top: 16px;
-    }
+        .about-cta p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      border-top: 1px solid #292929;
-      color: #999;
-      font-size: 12px;
-    }
+        .about-cta h2 {
+            max-width: 750px;
+            margin: 18px auto;
+        }
 
-    @media (max-width: 800px) {
-      header {
-        padding: 20px 5%;
-      }
+        .about-cta a {
+            display: inline-block;
+            padding: 16px 30px;
+            background: #fbf6f6;
+            color: rgb(5, 5, 5);
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
 
-      nav {
-        gap: 15px;
-      }
+        .about-cta a:hover {
+            background: #292929;
+        }
 
-      .story {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 55px 6%;
-      }
+        @media(max-width: 768px) {
+            .about-story-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
 
-      .story img {
-        height: 330px;
-      }
+            .about-story-image {
+                min-height: 380px;
+            }
 
-      .hero {
-        padding: 65px 6%;
-      }
-    }
+            .about-experience {
+                right: 10px;
+            }
 
-    @media (max-width: 520px) {
-      .logo {
-        font-size: 21px;
-      }
+            .about-values-grid {
+                grid-template-columns: 1fr;
+            }
 
-      nav {
-        width: 100%;
-      }
+            .about-story,
+            .about-values {
+                padding: 75px 0;
+            }
 
-      .booking-form {
-        padding: 22px 17px;
-      }
+            .about-mission {
+                padding: 75px 20px;
+            }
 
-      .booking-section {
-        padding: 55px 15px;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
+            .about-hero {
+                min-height: 460px;
+            }
+        }
+                .site-header .nav-cta {
+    margin-right: 140px;
+}
+    </style>
 </head>
 
-<body>
+<body class="about-page">
 
-  <header>
-    <a href="index.html" class="logo">
-      HAIDRI STUDIO
-      <span>CAPTURING YOUR SPECIAL MOMENTS</span>
-    </a>
+    <!-- HEADER -->
+<header class="site-header">
+    <nav class="navbar">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Haidri Studio Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a href="areas.html">Service Areas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="areas.html#lahore">Lahore</a></li>
+                    <li><a href="areas.html#faisalabad">Faisalabad</a></li>
+                     <li><a href="areas.html#gujrat">Gujrat</a></li>
+                    <li><a href="areas.html#multan">Multan</a></li>
+                    <li><a href="areas.html#rawalpindi">Rawalpindi</a></li>
+                    <li><a href="areas.html#islamabad">Islamabad</a></li>
+                    <li><a href="areas.html#gujranwala">Gujranwala</a></li>
+                    <li><a href="areas.html#sialkot">Sialkot</a></li>
+                    <li><a href="areas.html#bahawalpur">Bahawalpur</a></li>
+                    <li><a href="areas.html#Other City">Other City</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="https://wa.me/923074120607" class="nav-cta">
+            Book on WhatsApp ↗
+        </a>
+
     </nav>
+</header>
 
-    <a href="#booking" class="nav-btn">Book Now ↗</a>
-  </header>
+    <main>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <div class="eyebrow">GET TO KNOW US ━━━</div>
+        <!-- ABOUT HERO -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <span class="about-label">WHO WE ARE</span>
 
-        <h1>Every Moment Has a Story.</h1>
+                <h1>Stories Worth <span>Remembering.</span></h1>
 
-        <p>
-          At Haidri Studio, we capture meaningful moments
-          through professional photography, cinematic films
-          and creative storytelling.
-        </p>
-      </div>
-    </section>
+                <p>
+                    At Haidri Studio, we turn your most beautiful moments
+                    into timeless memories through wedding photography,
+                    cinematic films and creative storytelling.
+                </p>
+            </div>
+        </section>
 
-    <section class="story">
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
-          alt="Wedding photography and special moments"
-          loading="lazy"
-        >
-      </div>
+        <!-- OUR STORY -->
+        <section class="about-story">
+            <div class="about-container about-story-grid">
 
-      <div>
-        <div class="eyebrow">OUR STORY ━━━</div>
+                <div class="about-story-image">
+                    <div class="about-experience">
+                        <strong>25+</strong>
+                        <span>YEARS OF EXPERIENCE</span>
+                    </div>
+                </div>
 
-        <h2>Creating Memories That Last Forever</h2>
+                <div class="about-story-text">
+                    <span class="about-label">OUR STORY</span>
 
-        <p>
-          We believe every celebration is unique.
-          Our goal is to preserve your important moments
-          with creativity, attention to detail and care.
-        </p>
+                    <h2>We Capture Moments. <span>We Preserve Emotions.</span></h2>
 
-        <p>
-          From wedding photography to cinematic films,
-          we work to turn your memories into something
-          you can cherish for years to come.
-        </p>
+                    <p>
+                        Haidri Studio is built around a passion for capturing
+                        the beauty, emotions and unforgettable moments of life.
+                        We believe every wedding has a unique story worth telling.
+                    </p>
 
-        <a href="#booking" class="story-link">
-          Let's plan your event →
-        </a>
-      </div>
-    </section>
+                    <p>
+                        With 25 years of creative experience, we focus on
+                        meaningful photography, cinematic wedding films and
+                        professional event coverage.
+                    </p>
 
-    <section class="booking-section" id="booking">
-      <div class="booking-heading">
-        <div class="eyebrow">LET'S WORK TOGETHER ━━━</div>
+                    <p>
+                        From the smallest details to the biggest celebrations,
+                        our goal is to create memories that you can revisit
+                        and cherish for years to come.
+                    </p>
+                </div>
 
-        <h2>Book Your Experience</h2>
+            </div>
+        </section>
 
-        <p>
-          Tell us about your occasion and the service
-          you need. We'll get in touch with you.
-        </p>
-      </div>
+        <!-- OUR MISSION -->
+        <section class="about-mission">
+            <div class="about-container about-mission-content">
 
-      <form class="booking-form"
-            action="https://formsubmit.co/YOUR_EMAIL@example.com"
-            method="POST">
+                <span class="about-label">OUR MISSION</span>
 
-        <input type="hidden" name="_subject"
-               value="New Haidri Studio Booking Request">
+                <h2>Every Moment Has a Story. <span>We Make It Last.</span></h2>
 
-        <div class="form-group">
-          <label for="full-name">Full Name *</label>
+                <p>
+                    Our mission is to capture genuine emotions and transform
+                    them into beautiful photographs and cinematic films.
+                    We aim to make every client feel special by delivering
+                    creative work, attention to detail and memorable experiences.
+                </p>
 
-          <input type="text" id="full-name"
-                 name="Full Name"
-                 placeholder="Enter your full name"
-                 autocomplete="name" required>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="about-values">
+            <div class="about-container">
+
+                <div class="about-section-heading">
+                    <span class="about-label">WHY HAIDRI STUDIO</span>
+                    <h2>What Makes Us Different?</h2>
+                    <p>
+                        Our approach is built on creativity, passion and
+                        attention to every little detail.
+                    </p>
+                </div>
+
+                <div class="about-values-grid">
+
+                    <article class="about-value-card">
+                        <span class="number">01 / EXPERIENCE</span>
+                        <h3 style="color: #ffffff;">Years of Experience</h3>
+                        <p>
+                            25 years of creative experience helping us
+                            understand moments, lighting and visual storytelling.
+                        </p>
+                    </article>
+
+                    <article class="about-value-card">
+                        <span class="number">02 / CREATIVITY</span>
+                        <h3 style="color: #ffffff;">Creative Storytelling</h3>
+
+                        <p>
+                            We capture real emotions and turn your wedding
+                            memories into a beautiful visual story.
+                        </p>
+                    </article>
+
+                    <article class="about-value-card">
+                        <span class="number">03 / QUALITY</span>
+                        <h3 style="color: #ffffff;">Attention to Detail</h3>
+                        <p>
+                            From photography to final editing, we focus
+                            on quality and the details that matter.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="about-cta">
+            <span class="about-label">LET'S CREATE MEMORIES</span>
+
+            <h2>Your Special Day Deserves to Be Remembered.</h2>
+
+            <p>
+                Let Haidri Studio capture your beautiful moments.
+                Get in touch with us to discuss your wedding or event.
+            </p>
+
+            <a href="https://wa.me/923074120607?text=Hello%20Haidri%20Studio%2C%20I%20want%20to%20book%20your%20services.">
+                Book Your Event ↗
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a href="index.html" class="logo" style="color:white;">
+                    HAIDRI<span>STUDIO.</span>
+                </a>
+
+                <p style="margin-top:20px;">
+                    We capture the beauty, emotions and unforgettable
+                    moments of your wedding through photography
+                    and cinematic films.
+                </p>
+            </div>
+
+            <div>
+                <h3>EXPLORE</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+
+            <div>
+                <h3>OUR SERVICES</h3>
+                <p>Wedding Photography</p>
+                <p>Cinematic Films</p>
+                <p>Event Coverage</p>
+                <p>Albums & Editing</p>
+            </div>
+
+            <div>
+                <h3>CONTACT</h3>
+
+                <p>
+                    <a href="tel:+923074120607">+92 307 4120607</a>
+                </p>
+
+                <p>
+                    <a href="https://wa.me/923074120607"
+                       target="_blank"
+                       rel="noopener noreferrer">WhatsApp</a>
+                </p>
+
+                <p>
+                    <a href="mailto:your-email@example.com">
+                        your-email@example.com
+                    </a>
+                </p>
+
+                <p>Punjab, Pakistan</p>
+            </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="phone">Phone or WhatsApp Number *</label>
+        <div class="footer-bottom">
 
-          <input type="tel" id="phone"
-                 name="Phone or WhatsApp Number"
-                 placeholder="+92 3XX XXXXXXX"
-                 autocomplete="tel" required>
+            <p>© 2026 Haidri Studio. All rights reserved.</p>
+
+            <p class="footer-credit">
+                Developed by <span>AHM</span>
+            </p>
+
         </div>
-
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-
-          <input type="email" id="email"
-                 name="Email Address"
-                 placeholder="you@example.com"
-                 autocomplete="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="booking-type">
-            What would you like to book? *
-          </label>
-
-          <select id="booking-type"
-                  name="Booking Service" required>
-
-            <option value="" disabled selected>
-              Select a service
-            </option>
-
-            <option value="Wedding Photography">
-              Wedding Photography
-            </option>
-
-            <option value="Wedding Films and Cinematography">
-              Wedding Films &amp; Cinematography
-            </option>
-
-            <option value="Wedding and Event Coverage">
-              Wedding &amp; Event Coverage
-            </option>
-
-            <option value="Wedding Albums and Editing">
-              Wedding Albums &amp; Editing
-            </option>
-
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <button type="submit" class="submit-btn">
-          Send Booking Request →
-        </button>
-
-        <p class="form-note">
-          * Required fields. Your information will be used
-          to respond to your booking enquiry.
-        </p>
-      </form>
-    </section>
-  </main>
-
-
-
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-main">
-
-      <!-- Studio Information -->
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          HS<span>.</span> HAIDRI STUDIO
-        </a>
-
-        <p>
-          We capture the beauty, emotions and unforgettable
-          moments of your wedding through photography and
-          cinematic films.
-        </p>
-      </div>
-
-      <!-- Explore Links -->
-      <div class="footer-column">
-        <h3>EXPLORE</h3>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-column">
-        <h3>OUR SERVICES</h3>
-        <a href="services.html">Wedding Photography</a>
-        <a href="services.html">Cinematic Films</a>
-        <a href="services.html">Event Coverage</a>
-        <a href="services.html">Albums &amp; Editing</a>
-      </div>
-
-      <!-- Contact Details -->
-      <div class="footer-column">
-        <h3>CONTACT</h3>
-
-        <a href="tel:+923074120607">
-          +92 307 4120607
-        </a>
-
-        <a href="https://wa.me/923074120607"
-           target="_blank"
-           rel="noopener noreferrer">
-          WhatsApp
-        </a>
-
-        <p class="footer-address">
-          Punjab, Pakistan
-        </p>
-
-        <a href="mailto:info.haidristudio@gmail.com">
-          info.haidristudio@gmail.com
-        </a>
-      </div>
 
     </div>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>
-        © 2026 Haidri Studio. All rights reserved.
-      </p>
-
-
-      <p class="footer-designed">
-        "Developed by <strong>AHM</strong>"
-      </p>
-    </div>
-
-  </div>
 </footer>
+
+<script src="nav-indicator.js" defer></script>
 
 </body>
 </html>

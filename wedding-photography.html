@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Photography | Haidri Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(244,119,33,.12), transparent 35%),
+        #080808;
+    color: #f5f5f5;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.booking-section {
+    position: relative;
+    width: min(90%, 720px);
+    margin: 90px auto;
+    padding: 55px 50px;
+    background: linear-gradient(145deg, #171717, #0d0d0d);
+    border: 1px solid #333;
+    border-radius: 14px;
+    box-shadow: 0 25px 80px rgba(0,0,0,.5);
+}
+
+.booking-section::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 12%;
+    width: 76%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f47721, transparent);
+}
+
+.booking-section h1 {
+    color: #f47721;
+    font-size: clamp(30px, 5vw, 43px);
+    line-height: 1.15;
+    margin: 0 0 15px;
+    letter-spacing: -1px;
+}
+
+.booking-section p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.booking-form input,
+.booking-form textarea {
+    display: block;
+    width: 100%;
+    padding: 17px 18px;
+    margin-bottom: 20px;
+    background: #090909;
+    color: #fff;
+    border: 1px solid #353535;
+    border-radius: 6px;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    border-color: #f47721;
+    box-shadow: 0 0 0 3px rgba(244,119,33,.10);
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+    color: #888;
+}
+
+.booking-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 17px 25px;
+    background: #f47721;
+    color: #fff;
+    border: 1px solid #f47721;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.booking-form button:hover {
+    background: transparent;
+    color: #f47721;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .booking-section {
+        width: 92%;
+        margin: 45px auto;
+        padding: 35px 22px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<main class="booking-section">
+    <h1>Wedding Photography</h1>
+    <p>Fill out the form to book your wedding photography.</p>
+
+    <form class="booking-form" onsubmit="sendBooking(event)">
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit Booking ↗</button>
+    </form>
+</main>
+
+<script>
+function sendBooking(event) {
+    event.preventDefault();
+    const text = `Wedding Photography Booking
+Name: ${document.getElementById('firstName').value}
+Phone: ${document.getElementById('phone').value}
+Email: ${document.getElementById('email').value}
+Message: ${document.getElementById('message').value}`;
+
+    window.open("https://wa.me/923074120607?text=" + encodeURIComponent(text), "_blank");
+}
+</script>
+
+</body>
+</html>

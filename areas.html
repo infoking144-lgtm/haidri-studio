@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Haidri Studio provides professional wedding photography, cinematic films and event coverage across Punjab, Pakistan.">
+
+    <title>Service Areas | Haidri Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* HERO SECTION */
+        .areas-hero {
+            min-height: 55vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 130px 20px 80px;
+            background: #080808;
+        }
+
+        .areas-hero h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            color: white;
+            margin: 20px 0;
+        }
+
+        .areas-hero h1 span {
+            color: #ff7659;
+        }
+
+        .areas-hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        /* INTRO SECTION */
+        .areas-intro {
+            background: #111;
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        .areas-intro h2 {
+            font-size: 38px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .areas-intro h2 span {
+            color: #ff7659;
+        }
+
+        .areas-intro p {
+            max-width: 750px;
+            margin: auto;
+            color: #999;
+            line-height: 1.9;
+        }
+
+        /* CITY GRID */
+        .areas-section {
+            padding: 100px 7%;
+            background: #080808;
+        }
+
+        .areas-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .areas-heading h2 {
+            color: white;
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        .areas-heading h2 span {
+            color: #ff7659;
+        }
+
+        .areas-heading p {
+            color: #999;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .area-card {
+            padding: 35px 28px;
+            background: #111;
+            border: 1px solid #292929;
+            transition: .3s;
+            scroll-margin-top: 110px;
+        }
+
+        .area-card:hover {
+            border-color: #ff7659;
+            transform: translateY(-6px);
+        }
+
+        .area-number {
+            color: #ff7659;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        .area-card h3 {
+            color: white;
+            font-size: 25px;
+            margin: 20px 0 12px;
+        }
+
+        .area-card p {
+            color: #999;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .area-card a {
+            display: inline-block;
+            margin-top: 22px;
+            color: #ff7659;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* SERVICES SECTION */
+        .areas-services {
+            background: #111;
+            padding: 85px 7%;
+            text-align: center;
+        }
+
+        .areas-services h2 {
+            color: white;
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        .areas-services h2 span {
+            color: #ff7659;
+        }
+
+        .areas-services > p {
+            color: #999;
+            margin-bottom: 40px;
+        }
+
+        .areas-service-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .areas-service-list span {
+            padding: 16px 22px;
+            background: #080808;
+            border: 1px solid #292929;
+            color: #eee;
+        }
+
+        /* CTA */
+        .areas-cta {
+            text-align: center;
+            padding: 85px 20px;
+            background: #080808;
+        }
+
+        .areas-cta h2 {
+            color: white;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .areas-cta p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .areas-cta a {
+            display: inline-block;
+            padding: 16px 30px;
+            background: #ff7659;
+            color: #080808;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media(max-width: 900px) {
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-section {
+                padding: 70px 6%;
+            }
+
+            .areas-heading h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Haidri Studio Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a href="areas.html">Service Areas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="areas.html#lahore">Lahore</a></li>
+                    <li><a href="areas.html#faisalabad">Faisalabad</a></li>
+                     <li><a href="areas.html#gujrat">Gujrat</a></li>
+                    <li><a href="areas.html#multan">Multan</a></li>
+                    <li><a href="areas.html#rawalpindi">Rawalpindi</a></li>
+                    <li><a href="areas.html#islamabad">Islamabad</a></li>
+                    <li><a href="areas.html#gujranwala">Gujranwala</a></li>
+                    <li><a href="areas.html#sialkot">Sialkot</a></li>
+                    <li><a href="areas.html#bahawalpur">Bahawalpur</a></li>
+                    <li><a href="areas.html#Other City">Other City</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="https://wa.me/923074120607" class="nav-cta">
+            Book on WhatsApp ↗
+        </a>
+
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="areas-hero">
+
+    <div>
+
+        <span style="color:#ff7659; letter-spacing:4px;">
+            WHERE WE WORK
+        </span>
+
+        <h1>
+            Our Service<br>
+            <span>Areas.</span>
+        </h1>
+
+        <p>
+            From beautiful weddings to unforgettable celebrations,
+            Haidri Studio brings professional photography and cinematic
+            storytelling to your special moments across Pakistan.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+<section class="areas-intro">
+
+    <h2>Capturing Stories <span>Across Punjab.</span></h2>
+
+    <p>
+        Your wedding deserves beautiful memories, wherever your
+        celebration takes place. Our team provides wedding photography,
+        cinematic films and event coverage across multiple cities.
+        Explore our service locations below.
+    </p>
+
+</section>
+
+
+<!-- CITY AREAS -->
+<section class="areas-section">
+
+    <div class="areas-heading">
+
+        <span style="color:#ff7659; letter-spacing:3px;">
+            OUR LOCATIONS
+        </span>
+
+        <h2>Explore Our <span>Service Areas.</span></h2>
+
+        <p>Professional wedding coverage in cities across Pakistan.</p>
+
+    </div>
+
+
+    <div class="areas-grid">
+
+        <article class="area-card" id="lahore">
+            <span class="area-number">01 / CITY</span>
+            <h3>Lahore</h3>
+            <p>
+                Wedding photography and cinematic wedding films
+                for your memorable celebrations in Lahore.
+            </p>
+         <a href="lahore.html">Explore Lahore ↗</a>
+</article>
+
+        <article class="area-card" id="faisalabad">
+            <span class="area-number">02 / CITY</span>
+            <h3>Faisalabad</h3>
+            <p>
+                Professional wedding photography, event coverage
+                and creative cinematic storytelling in Faisalabad.
+            </p>
+          <a href="faisalabad.html">Explore Faisalabad ↗</a>
+</article>
+
+        <article class="area-card" id="multan">
+            <span class="area-number">03 / CITY</span>
+            <h3>Multan</h3>
+            <p>
+                Capture your wedding celebrations and special
+                moments with beautiful photography in Multan.
+            </p>
+           <a href="multan.html">Explore Multan ↗</a>
+</article>
+
+        <article class="area-card" id="rawalpindi">
+            <span class="area-number">04 / CITY</span>
+            <h3>Rawalpindi</h3>
+            <p>
+                Wedding photography and cinematic coverage
+                for unforgettable events in Rawalpindi.
+            </p>
+          <a href="rawalpindi.html">Explore Rawalpindi ↗</a>
+</article>
+        <article class="area-card" id="islamabad">
+            <span class="area-number">05 / CITY</span>
+            <h3>Islamabad</h3>
+            <p>
+                Elegant wedding photography and cinematic films
+                for your special celebrations in Islamabad.
+            </p>
+         <a href="islamabad.html">Explore Islamabad ↗</a>
+</article>
+
+        <article class="area-card" id="gujranwala">
+            <span class="area-number">06 / CITY</span>
+            <h3>Gujranwala</h3>
+            <p>
+                Professional event photography and wedding films
+                to preserve your beautiful memories in Gujranwala.
+            </p>
+            <a href="gujranwala.html">Explore Gujranwala ↗</a>
+</article>
+
+
+        <article class="area-card" id="sialkot">
+            <span class="area-number">07 / CITY</span>
+            <h3>Sialkot</h3>
+            <p>
+                Creative wedding photography and event coverage
+                for your unforgettable celebrations in Sialkot.
+            </p>
+         <a href="sialkot.html">Explore Sialkot ↗</a>
+</article>
+
+        <article class="area-card" id="bahawalpur">
+            <span class="area-number">08 / CITY</span>
+            <h3>Bahawalpur</h3>
+            <p>
+                Cinematic wedding films and professional photography
+                for special moments in Bahawalpur.
+            </p>
+           <a href="bahawalpur.html">Explore Bahawalpur ↗</a>
+</article>
+        <article class="area-card" id="gujrat">
+    <h3>Gujrat</h3>
+    <p>Professional wedding photography and cinematic films in Gujrat.</p>
+    <a href="gujrat.html">Explore Gujrat ↗</a>
+</article>
+
+
+        <article class="area-card">
+            <span class="area-number">09 / REGION</span>
+            <h3>Other Cities</h3>
+            <p>
+                Planning a wedding outside these cities?
+                Contact us to discuss coverage for your location.
+            </p>
+            <a href="contact.html">Contact Our Team ↗</a>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="areas-services">
+
+    <h2>Our Services <span>Across Locations.</span></h2>
+
+    <p>Beautifully capturing every moment of your special day.</p>
+
+    <div class="areas-service-list">
+        <span>Wedding Photography</span>
+        <span>Cinematic Films</span>
+        <span>Event Coverage</span>
+        <span>Wedding Albums & Editing</span>
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="areas-cta">
+
+    <h2>Your City. Your Story. Our Lens.</h2>
+
+    <p>
+        Tell us about your wedding and let Haidri Studio capture
+        memories that last forever.
+    </p>
+
+    <a href="https://wa.me/923074120607">
+        Book Your Event ↗
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a href="index.html" class="logo" style="color:white;">
+                    HAIDRI<span>STUDIO.</span>
+                </a>
+
+                <p style="margin-top:20px;">
+                    We capture the beauty, emotions and unforgettable
+                    moments of your wedding through photography
+                    and cinematic films.
+                </p>
+            </div>
+
+            <div>
+                <h3>EXPLORE</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+
+            <div>
+                <h3>OUR SERVICES</h3>
+                <p>Wedding Photography</p>
+                <p>Cinematic Films</p>
+                <p>Event Coverage</p>
+                <p>Albums & Editing</p>
+            </div>
+
+            <div>
+                <h3>CONTACT</h3>
+
+                <p>
+                    <a href="tel:+923074120607">+92 307 4120607</a>
+                </p>
+
+                <p>
+                    <a href="https://wa.me/923074120607"
+                       target="_blank"
+                       rel="noopener noreferrer">WhatsApp</a>
+                </p>
+
+                <p>
+                    <a href="mailto:your-email@example.com">
+                        your-email@example.com
+                    </a>
+                </p>
+
+                <p>Punjab, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Haidri Studio. All rights reserved.</p>
+
+            <p class="footer-credit">
+                Developed by <span>AHM</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="nav-indicator.js" defer></script>
+
+</body>
+</html>

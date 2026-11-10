@@ -2,232 +2,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Haidri Studio builds modern websites for businesses and brands.">
-  <title>Haidri Studio | Web Development</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Haidri Studio captures your beautiful wedding moments through professional photography and cinematic films.">
+
+    <title>Haidri Studio | Wedding Photography & Films</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Navigation animation layering -->
+    <style>
+        header nav {
+            position: relative;
+        }
+
+        header nav .nav-links a {
+            position: relative;
+            z-index: 1;
+        }
+           
+    </style>
 </head>
+
 <body>
 
-  <header class="navbar">
-    <a href="#" class="logo">HS<span>.</span> <small>HAIDRI STUDIO</small></a>
+<!-- NAVBAR -->
+<header class="site-header">
 
-    
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="#portfolio">Portfolio</a>
-<a href="contact.html">Contact</a>
+    <div class="container navbar">
 
-  <a
-    href="https://wa.me/923074120607?text=Hello%20Haidri%20Studio"
-    class="nav-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Book on WhatsApp ↗
-  </a>
-</nav>
-
-  </header>
-
-  <main>
-
-<section class="hero" id="home">
-  <p class="eyebrow">HAIDRI STUDIO · WEDDING PHOTOGRAPHY & FILMS</p>
-
-<h1>
-  Every Love Story<br>
-  Deserves to Be<br>
-  <span>Remembered Forever.</span>
-</h1>
-
-<p class="hero-text">
-  We capture your beautiful wedding moments and turn
-  them into timeless memories through photography
-  and cinematic films.
-</p>
-
-  <div class="hero-actions">
-<a href="portfolio.html" class="primary-button">
-  Explore Our Work ↗
-</a>
-
-    <a href="#contact" class="text-button">
-      Book Your Event ↓
-    </a>
-  </div>
-
-  <div class="hero-bottom">
-    <span>WEDDING PHOTOGRAPHY</span>
-    <span>CINEMATIC FILMS · ALL PUNJAB</span>
-  </div>
-</section>
-
-
-
-
-    <section class="services section" id="services">
-      <p class="eyebrow">OUR WEDDING SERVICES</p>
-
-      <h2>
-        Every moment deserves<br>
-        to be <span>remembered forever.</span>
-      </h2>
-
-      <p class="section-description">
-        From the first celebration to the final farewell,
-        we capture every beautiful moment of your wedding.
-      </p>
-
-      <div class="service-grid">
-
-        <article class="service-card">
-          <span>01 /</span>
-          <h3>Wedding Photography</h3>
-          <p>
-            Beautiful wedding portraits, candid moments and
-            emotional memories captured with creativity.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span>02 /</span>
-          <h3>Cinematic Wedding Films</h3>
-          <p>
-            Relive your special day through cinematic storytelling,
-            professional filming and memorable highlights.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span>03 /</span>
-          <h3>Event Coverage</h3>
-          <p>
-            Complete coverage of Mehndi, Baraat, Walima and
-            every special wedding celebration.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <span>04 /</span>
-          <h3>Wedding Albums & Editing</h3>
-          <p>
-            Premium wedding albums and professional photo editing
-            to preserve your memories beautifully.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="about section" id="about">
-      <p class="eyebrow">ABOUT HAIDRI STUDIO</p>
-      <h2>Good design gets attention.<br>Great websites build trust.</h2>
-      <p>We help businesses create a stronger online presence through
-        thoughtful design and reliable web development.</p>
-    </section>
-
-<section class="contact section" id="contact">
-  <p class="eyebrow">LET'S WORK TOGETHER</p>
-
-  <h2>Have a project in mind?<br><span>Let's build it.</span></h2>
-
-  <p class="contact-description">
-    Haidri Studio provides professional web development
-    services to businesses across Punjab, Pakistan.
-  </p>
-
-  <div class="contact-details">
-    <div class="contact-item">
-      <span>PHONE / WHATSAPP</span>
-      <a href="https://wa.me/923074120607" target="_blank" rel="noopener noreferrer">
-        +92 307 4120607 ↗
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <span>SERVICE AREA</span>
-      <p>All Punjab, Pakistan</p>
-    </div>
-  </div>
-
-  <a href="https://wa.me/923074120607?text=Hello%20Haidri%20Studio%2C%20I%20need%20a%20website."
-     class="primary-button"
-     target="_blank"
-     rel="noopener noreferrer">
-    Contact Us on WhatsApp ↗
-  </a>
-</section>
-
-<!-- HAIDRI STUDIO FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-main">
-
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          HS<span>.</span> HAIDRI STUDIO
+        <!-- LOGO -->
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png"
+                 alt="Haidri Studio"
+                 class="logo-img">
         </a>
 
-        <p>
-          We capture the beauty, emotions and unforgettable
-          moments of your wedding through photography and
-          cinematic films.
-        </p>
-      </div>
+        <!-- NAVIGATION -->
+        <nav aria-label="Main navigation">
 
-      <div class="footer-column">
-        <h3>EXPLORE</h3>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="portfolio.html">Portfolio</a>
-      </div>
+            <ul class="nav-links">
 
-      <div class="footer-column">
-        <h3>OUR SERVICES</h3>
-        <a href="services.html">Wedding Photography</a>
-        <a href="services.html">Cinematic Films</a>
-        <a href="services.html">Event Coverage</a>
-        <a href="services.html">Albums & Editing</a>
-      </div>
+                <li>
+                    <a href="index.html" class="active" aria-current="page">
+                        Home
+                    </a>
+                </li>
 
-<div class="footer-column">
-  <h3>CONTACT</h3>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
 
-  <a href="tel:+923074120607">+92-307-4120607</a>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
 
-  <a href="https://wa.me/923074120607"
-     target="_blank"
-     rel="noopener noreferrer">
-    WhatsApp
-  </a>
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
 
-  <p class="footer-address">
-    Punjab, Pakistan
-  </p>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+<li class="dropdown">
+    <a href="areas.html">Service Areas</a>
 
-  <a href="mailto:info.haidristudio@gmail.com">
-  info.haidristudio@gmail.com
-  </a>
-</div>
+    <ul class="dropdown-menu">
+        <li><a href="areas.html#lahore">Lahore</a></li>
+        <li><a href="areas.html#faisalabad">Faisalabad</a></li>
+         <li><a href="areas.html#gujrat">Gujrat</a></li>
+        <li><a href="areas.html#multan">Multan</a></li>
+        <li><a href="areas.html#rawalpindi">Rawalpindi</a></li>
+        <li><a href="areas.html#islamabad">Islamabad</a></li>
+        <li><a href="areas.html#gujranwala">Gujranwala</a></li>
+        <li><a href="areas.html#sialkot">Sialkot</a></li>
+        <li><a href="areas.html#bahawalpur">Bahawalpur</a></li>
+        <li><a href="areas.html#Other City">Other City</a></li>
+    </ul>
+</li>
 
+    
+</li>
+            </ul>
 
-</div>
+        </nav>
 
-    <div class="footer-bottom">
-      <p>
-        © 2026 Haidri Studio. All rights reserved.
-      </p>
+        <!-- WHATSAPP BUTTON -->
+        <a class="nav-cta"
+           href="https://wa.me/923074120607"
+           target="_blank"
+           rel="noopener noreferrer">
+            Book on WhatsApp ↗
+        </a>
 
-      <p class="footer-credit">
-        “Developed by <strong>AHM</strong>”
-      </p>
     </div>
 
-  </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero"
+    style="background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.15)), url('images/story-background.png') center/cover;">
+
+    <div class="hero-content">
+
+        <span class="section-tag" style="color:#ff7659;">
+            HAIDRI STUDIO · PAKISTAN
+        </span>
+
+        <h1 style="color:white;">
+            Every Moment<br>
+            Has a <span>Story.</span>
+        </h1>
+
+        <p style="color:#eeeeee;">
+            We capture the beauty, emotions and unforgettable moments
+            of your wedding through photography and cinematic films.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="portfolio.html" class="btn-primary">
+                Explore Our Work ↗
+            </a>
+
+            <a href="https://wa.me/923074120607"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-outline"
+               style="border-color:white;color:white;">
+                Book Your Event
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTRODUCTION -->
+<section class="section">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=85"
+                alt="Wedding photography">
+
+        </div>
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                WELCOME TO HAIDRI STUDIO
+            </span>
+
+            <h2 class="section-title">
+                Your Memories.<br>
+                Our Passion.
+            </h2>
+
+            <p>
+                Every wedding has a beautiful story. At Haidri Studio,
+                we turn your special moments into timeless memories.
+            </p>
+
+            <p>
+                From emotional ceremonies to joyful celebrations,
+                we capture every detail with creativity and care.
+            </p>
+
+            <a href="about.html" class="btn-primary">
+                Discover Our Story ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <span class="section-tag">
+            WHAT WE DO
+        </span>
+
+        <h2 class="section-title">
+            Our Creative Services
+        </h2>
+
+        <p class="section-description">
+            Professional photography and cinematic services
+            to make your special occasions unforgettable.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding photography">
+
+                <div class="service-card-content">
+
+                    <h3>Wedding Photography</h3>
+
+                    <p>
+                        Beautiful portraits and unforgettable wedding moments.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding films">
+
+                <div class="service-card-content">
+
+                    <h3>Cinematic Films</h3>
+
+                    <p>
+                        Beautiful wedding stories captured in cinematic style.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"
+                    alt="Event coverage">
+
+                <div class="service-card-content">
+
+                    <h3>Event Coverage</h3>
+
+                    <p>
+                        Complete coverage of your celebrations and special events.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding albums">
+
+                <div class="service-card-content">
+
+                    <h3>Albums & Editing</h3>
+
+                    <p>
+                        Elegant albums and professional photo editing.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="services.html"
+           class="btn-primary"
+           style="margin-top:35px;">
+
+            View All Services ↗
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO PREVIEW -->
+<section class="section">
+
+    <div class="container">
+
+        <span class="section-tag">
+            OUR PORTFOLIO
+        </span>
+
+        <h2 class="section-title">
+            Moments Worth Remembering.
+        </h2>
+
+        <p class="section-description">
+            A glimpse into the beautiful stories we love capturing.
+        </p>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding celebration">
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding couple">
+
+            </div>
+
+
+            <div class="portfolio-item">
+
+                <img
+                    src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85"
+                    alt="Wedding event">
+
+            </div>
+
+        </div>
+
+        <a href="portfolio.html"
+           class="btn-primary"
+           style="margin-top:35px;">
+
+            Explore Full Portfolio ↗
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING CTA -->
+<section class="section section-light">
+
+    <div class="container" style="text-align:center;">
+
+        <span class="section-tag">
+            LET'S CREATE MEMORIES
+        </span>
+
+        <h2 class="section-title">
+            Your Big Day Deserves<br>
+            Something Special.
+        </h2>
+
+        <p class="section-description" style="margin:0 auto;">
+
+            Let's discuss your wedding photography and film requirements.
+            Get in touch with Haidri Studio today.
+
+        </p>
+
+        <a
+            href="https://wa.me/923074120607?text=Hello%20Haidri%20Studio%2C%20I%20want%20to%20book%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary">
+
+            Book Your Wedding ↗
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- BRAND -->
+            <div>
+
+                <a href="index.html"
+                   class="logo"
+                   style="color:white;">
+
+                    HAIDRI<span>STUDIO.</span>
+
+                </a>
+
+                <p style="margin-top:20px;">
+
+                    We capture the beauty, emotions and unforgettable
+                    moments of your wedding through photography
+                    and cinematic films.
+
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+            <div>
+
+                <h3>EXPLORE</h3>
+
+                <p><a href="index.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="contact.html">Contact</a></p>
+
+            </div>
+
+
+            <!-- SERVICES -->
+            <div>
+
+                <h3>OUR SERVICES</h3>
+
+                <p>Wedding Photography</p>
+                <p>Cinematic Films</p>
+                <p>Event Coverage</p>
+                <p>Albums & Editing</p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div>
+
+                <h3>CONTACT</h3>
+
+                <p>
+                    <a href="tel:+923074120607">
+                        +92 307 4120607
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://wa.me/923074120607"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:your-email@example.com">
+                        your-email@example.com
+                    </a>
+                </p>
+
+                <p>Punjab, Pakistan</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Haidri Studio. All rights reserved.
+            </p>
+
+            <p class="footer-credit">
+                Developed by <span>AHM</span>
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
+
+
+<!-- ANIMATED NAVIGATION INDICATOR -->
+<script src="nav-indicator.js" defer></script>
+
+</body>
+</html>

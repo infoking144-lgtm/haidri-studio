@@ -2,450 +2,530 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Haidri Studio by Muhammad Mansha Haidri. Wedding photography, cinematic films and event coverage.">
-  <title>Portfolio | Haidri Studio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore wedding photography, cinematic films and event coverage by Haidri Studio.">
+    <title>Portfolio | Haidri Studio</title>
+    <link rel="stylesheet" href="style.css">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+        /* PORTFOLIO PAGE */
 
-    body {
-      margin: 0;
-      background: #080808;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
-    }
+        .portfolio-hero {
+            padding: 110px 7% 85px;
+            text-align: center;
+            background: #040404;
+        }
 
-    .portfolio-hero {
-      max-width: 1200px;
-      margin: auto;
-      padding: 100px 6% 75px;
-    }
+        .portfolio-hero span {
+            color: #f47721;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 5px;
+        }
 
-    .eyebrow {
-      color: #aaa;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+        .portfolio-hero h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1.1;
+            margin: 22px 0;
+            color: #111;
+        }
 
-    .portfolio-hero h1 {
-      font-size: clamp(43px, 7vw, 82px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-      margin: 25px 0;
-    }
+        .portfolio-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #d8d6d6;
+            font-size: 16px;
+            line-height: 1.9;
+        }
 
-    .portfolio-hero h1 span {
-      color: #929292;
-    }
+        .portfolio-gallery {
+            padding: 90px 7%;
+            background: #fff;
+        }
 
-    .hero-description {
-      max-width: 650px;
-      color: #aaa;
-      font-size: 16px;
-      line-height: 1.9;
-    }
+        .portfolio-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
 
-    .experience {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 18px 24px;
-      border: 1px solid #333;
-    }
+        .portfolio-heading span {
+            color: #f47721;
+            letter-spacing: 4px;
+            font-size: 12px;
+            font-weight: 700;
+        }
 
-    .experience strong {
-      display: block;
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
+        .portfolio-heading h2 {
+            color: #111;
+            font-size: clamp(32px, 5vw, 52px);
+            margin: 15px 0;
+        }
 
-    .experience span {
-      font-size: 12px;
-      color: #aaa;
-    }
+        .portfolio-heading p {
+            color: #888;
+            line-height: 1.8;
+        }
 
-    .portfolio-work {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 6% 100px;
-    }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px 22px;
+        }
 
-    .section-heading {
-      margin-bottom: 35px;
-    }
+        .portfolio-card {
+            background: #111;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .section-heading h2 {
-      font-size: clamp(32px, 5vw, 50px);
-      margin: 15px 0;
-      letter-spacing: -1.5px;
-    }
+        .portfolio-card img {
+            display: block;
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            transition: transform .6s ease;
+        }
 
-    .section-heading p {
-      color: #999;
-      line-height: 1.8;
-    }
+        .portfolio-card:hover img {
+            transform: scale(1.06);
+        }
 
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-    }
+        .portfolio-image {
+            overflow: hidden;
+            position: relative;
+        }
 
-    .work-card {
-      min-width: 0;
-      border: 1px solid #292929;
-      background: #101010;
-      transition: transform .3s, border-color .3s;
-    }
+        .portfolio-image::after {
+            content: "";
+            position: absolute;
+            inset: 50% 0 0;
+            background: linear-gradient(transparent, rgba(0,0,0,.3));
+            pointer-events: none;
+        }
 
-    .work-card:hover {
-      transform: translateY(-5px);
-      border-color: #777;
-    }
+        .portfolio-info {
+            padding: 24px 22px 27px;
+            background: #111;
+        }
 
-    .work-image {
-      min-height: 280px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.75)),
-        linear-gradient(135deg, #777, #282828 48%, #080808);
-    }
+        .portfolio-info span {
+            color: #f47721;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
 
-    .work-image.two {
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
-        linear-gradient(135deg, #555, #191919 55%, #777);
-    }
+        .portfolio-info h3 {
+            color: #fff;
+            font-size: 20px;
+            margin: 12px 0;
+        }
 
-    .work-image.three {
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.8)),
-        linear-gradient(135deg, #292929, #777 50%, #111);
-    }
+        .portfolio-info p {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
 
-    .work-image.four {
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.8)),
-        linear-gradient(135deg, #777, #161616 55%, #444);
-    }
+        .portfolio-cta {
+            padding: 95px 20px;
+            text-align: center;
+            background: #101010;
+        }
 
-    .work-image span {
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: #ddd;
-    }
+        .portfolio-cta span {
+            color: #f47721;
+            font-size: 12px;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
 
-    .work-image h3 {
-      font-size: clamp(25px, 4vw, 42px);
-      line-height: 1.1;
-      margin: 0;
-    }
+        .portfolio-cta h2 {
+            color: #fff;
+            font-size: clamp(32px, 5vw, 55px);
+            margin: 20px auto;
+            max-width: 750px;
+        }
 
-    .work-info {
-      padding: 22px;
-    }
+        .portfolio-cta p {
+            color: #aaa;
+            line-height: 1.8;
+        }
 
-    .work-info h3 {
-      font-size: 19px;
-      margin: 0 0 10px;
-    }
+        .portfolio-cta a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 16px 30px;
+            background: #f47721;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
 
-    .work-info p {
-      color: #999;
-      font-size: 13px;
-      line-height: 1.7;
-      margin: 0;
-    }
+        .portfolio-cta a:hover {
+            background: #fff;
+            color: #111;
+        }
 
-    .about-creator {
-      max-width: 1200px;
-      margin: 0 auto 90px;
-      padding: 55px 6%;
-      border-top: 1px solid #292929;
-      border-bottom: 1px solid #292929;
-    }
+        @media(max-width: 950px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-    .about-creator h2 {
-      font-size: clamp(30px, 5vw, 48px);
-      margin: 20px 0;
-    }
+        @media(max-width: 600px) {
+            .portfolio-hero {
+                padding: 75px 6%;
+            }
 
-    .about-creator p {
-      max-width: 720px;
-      color: #aaa;
-      line-height: 1.9;
-    }
+            .portfolio-gallery {
+                padding: 65px 5%;
+            }
 
-    .booking {
-      text-align: center;
-      padding: 80px 6%;
-      background: #f2f2f2;
-      color: #111;
-    }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
 
-    .booking h2 {
-      font-size: clamp(35px, 5vw, 56px);
-      margin: 15px 0;
-    }
+            .portfolio-card img {
+                height: 350px;
+            }
+        }
+        .site-header .nav-cta {
+    margin-right: 140px;
+}
+.portfolio-hero {
+    background: #080808;
+}
 
-    .booking p {
-      color: #555;
-      line-height: 1.8;
-    }
-
-    .booking-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 16px 25px;
-      background: #111;
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      transition: background .3s;
-    }
-
-    .booking-button:hover {
-      background: #444;
-    }
-
-    .portfolio-footer {
-      padding: 25px;
-      text-align: center;
-      color: #888;
-      font-size: 12px;
-    }
-
-    @media (max-width: 650px) {
-      .portfolio-hero {
-        padding-top: 65px;
-      }
-
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .work-image {
-        min-height: 250px;
-      }
-    }
-  </style>
+.portfolio-hero h1 {
+    color: #ffffff;
+}
+    </style>
 </head>
 
 <body>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">
-      HS<span>.</span> <small>HAIDRI STUDIO</small>
-    </a>
+<!-- HEADER -->
+<header class="site-header">
+    <nav class="navbar">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="index.html#contact">Contact</a>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Haidri Studio Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a href="areas.html">Service Areas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="areas.html#lahore">Lahore</a></li>
+                    <li><a href="areas.html#faisalabad">Faisalabad</a></li>
+                     <li><a href="areas.html#gujrat">Gujrat</a></li>
+                    <li><a href="areas.html#multan">Multan</a></li>
+                    <li><a href="areas.html#rawalpindi">Rawalpindi</a></li>
+                    <li><a href="areas.html#islamabad">Islamabad</a></li>
+                    <li><a href="areas.html#gujranwala">Gujranwala</a></li>
+                    <li><a href="areas.html#sialkot">Sialkot</a></li>
+                    <li><a href="areas.html#bahawalpur">Bahawalpur</a></li>
+                    <li><a href="areas.html#Other City">Other City</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="https://wa.me/923074120607" class="nav-cta">
+            Book on WhatsApp ↗
+        </a>
+
     </nav>
-  </header>
+</header>
 
-  <main>
 
-    <section class="portfolio-hero">
-      <p class="eyebrow">HAIDRI STUDIO · WEDDING PHOTOGRAPHY & FILMS</p>
+<!-- HERO SECTION -->
+<section class="portfolio-hero">
+    <span>HAIDRI STUDIO / OUR WORK</span>
 
-      <h1>
-        Muhammad Mansha Haidri.<br>
-        <span>Every moment tells a story.</span>
-      </h1>
+    <h1>Our Creative<br>Portfolio</h1>
 
-      <p class="hero-description">
-        With 28 years of experience, I capture the emotions,
-        beauty and unforgettable moments that make every
-        celebration unique. From elegant wedding photography
-        to cinematic films and special events, my goal is to
-        turn your precious memories into timeless stories.
-      </p>
+    <p>
+        Every photograph tells a story. Every film captures an emotion.
+        Explore our collection of wedding photography, cinematic films
+        and unforgettable celebrations.
+    </p>
+</section>
 
-      <div class="experience">
-        <strong>28+ Years</strong>
-        <span>Experience · Creativity · Memorable Stories</span>
-      </div>
-    </section>
 
-    <section class="portfolio-work">
-      <div class="section-heading">
-        <p class="eyebrow">OUR SELECTED WORK</p>
-        <h2>Stories worth remembering.</h2>
-        <p>Every celebration has a story. Every detail deserves attention.</p>
-      </div>
+<!-- PORTFOLIO GALLERY -->
+<section class="portfolio-gallery">
 
-      <div class="work-grid">
+    <div class="portfolio-heading">
+        <span>SELECTED PROJECTS</span>
+        <h2>Stories We Have Captured</h2>
+        <p>A collection of moments, emotions and beautiful memories.</p>
+    </div>
 
-        <article class="work-card">
-          <div class="work-image">
-            <span>01 / PHOTOGRAPHY</span>
-            <h3>Love, captured<br>forever.</h3>
-          </div>
-          <div class="work-info">
-            <h3>Wedding Photography</h3>
-            <p>Beautiful portraits, heartfelt emotions and timeless wedding memories.</p>
-          </div>
+
+    <div class="portfolio-grid">
+
+        <!-- PROJECT 01 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Wedding photography">
+            </div>
+            <div class="portfolio-info">
+                <span>01 / WEDDING PHOTOGRAPHY</span>
+                <h3>Beautiful Wedding Moments</h3>
+                <p>Capturing genuine emotions and unforgettable wedding memories.</p>
+            </div>
         </article>
 
-        <article class="work-card">
-          <div class="work-image two">
-            <span>02 / CINEMATOGRAPHY</span>
-            <h3>Your story.<br>In motion.</h3>
-          </div>
-          <div class="work-info">
-            <h3>Cinematic Wedding Films</h3>
-            <p>Wedding films that bring special moments and emotions back to life.</p>
-          </div>
+
+        <!-- PROJECT 02 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=85" alt="Bride and groom">
+            </div>
+            <div class="portfolio-info">
+                <span>02 / COUPLE SHOOT</span>
+                <h3>Forever Together</h3>
+                <p>Elegant couple portraits with beautiful natural moments.</p>
+            </div>
         </article>
 
-        <article class="work-card">
-          <div class="work-image three">
-            <span>03 / EVENTS</span>
-            <h3>Moments that<br>bring us together.</h3>
-          </div>
-          <div class="work-info">
-            <h3>Wedding & Event Coverage</h3>
-            <p>Thoughtful coverage of celebrations, ceremonies and meaningful details.</p>
-          </div>
+
+        <!-- PROJECT 03 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85" alt="Wedding celebration">
+            </div>
+            <div class="portfolio-info">
+                <span>03 / WEDDING EVENTS</span>
+                <h3>A Celebration of Love</h3>
+                <p>Special celebrations captured with creativity and detail.</p>
+            </div>
         </article>
 
-        <article class="work-card">
-          <div class="work-image four">
-            <span>04 / FINISHING TOUCHES</span>
-            <h3>Memories,<br>beautifully preserved.</h3>
-          </div>
-          <div class="work-info">
-            <h3>Albums & Photo Editing</h3>
-            <p>Carefully finished photographs and albums to cherish for years to come.</p>
-          </div>
+
+        <!-- PROJECT 04 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                    <img src="images/portfolio-04.jpg"
+     alt="Haidri Studio wedding photography">
+            <div class="portfolio-info">
+                <span>04 / WEDDING CEREMONY</span>
+                <h3>Moments to Remember</h3>
+                <p>Beautiful details and emotional wedding ceremonies.</p>
+            </div>
         </article>
 
-      </div>
-    </section>
 
-    <section class="about-creator">
-      <p class="eyebrow">BEHIND THE CAMERA</p>
-      <h2>Experience meets emotion.</h2>
-      <p>
-        I'm Muhammad Mansha Haidri, and I believe the best photographs
-        do more than show how a moment looked — they remind you
-        how it felt. With 28 years of experience, I bring care,
-        creativity and attention to detail to every celebration.
-      </p>
-      <p>
-        My aim is simple: create photographs and films that feel
-        personal today and remain meaningful for generations.
-      </p>
-    </section>
+        <!-- PROJECT 05 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85" alt="Wedding decoration">
+            </div>
+            <div class="portfolio-info">
+                <span>05 / EVENT COVERAGE</span>
+                <h3>Elegant Wedding Details</h3>
+                <p>From decorations to the smallest details, everything matters.</p>
+            </div>
+        </article>
 
-    <section class="booking">
-      <p class="eyebrow">LET'S MAKE MEMORIES</p>
-      <h2>Your story deserves to be told.</h2>
-      <p>Tell us about your wedding or upcoming event.</p>
 
-      <a
-        class="booking-button"
-        href="https://wa.me/923074120607?text=Hello%20Haidri%20Studio%2C%20I%20would%20like%20to%20discuss%20wedding%20photography%20or%20videography."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Discuss Your Event on WhatsApp ↗
-      </a>
-    </section>
+        <!-- PROJECT 06 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85" alt="Wedding couple">
+            </div>
+            <div class="portfolio-info">
+                <span>06 / COUPLE PORTRAITS</span>
+                <h3>Timeless Portraits</h3>
+                <p>Artistic portraits that preserve memories for a lifetime.</p>
+            </div>
+        </article>
 
-  </main>
 
-  <footer class="portfolio-footer">
-   
-  </footer>
+        <!-- PROJECT 07 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                         <img src="images/portfolio-07.jpg"
+     alt="Haidri Studio wedding photography">
+            <div class="portfolio-info">
+                <span>07 / RECEPTION</span>
+                <h3>An Evening to Remember</h3>
+                <p>Celebrating love through beautiful event photography.</p>
+            </div>
+        </article>
 
-<footer class="site-footer">
-  <div class="footer-container">
 
-    <div class="footer-main">
+        <!-- PROJECT 08 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Wedding venue">
+            </div>
+            <div class="portfolio-info">
+                <span>08 / WEDDING DECOR</span>
+                <h3>Beautiful Settings</h3>
+                <p>Capturing the atmosphere and beauty of every celebration.</p>
+            </div>
+        </article>
 
-      <!-- Studio Information -->
-      <div class="footer-brand">
-        <a href="index.html" class="footer-logo">
-          HS<span>.</span> HAIDRI STUDIO
-        </a>
 
-        <p>
-          We capture the beauty, emotions and unforgettable
-          moments of your wedding through photography and
-          cinematic films.
-        </p>
-      </div>
+        <!-- PROJECT 09 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+               <img src="images/portfolio-09.jpg"
+     alt="Haidri Studio wedding photography">
+            <div class="portfolio-info">
+                <span>09 / PORTRAIT</span>
+                <h3>Portraits with Personality</h3>
+                <p>Creative photography focused on expressions and details.</p>
+            </div>
+        </article>
 
-      <!-- Explore Links -->
-      <div class="footer-column">
-        <h3>EXPLORE</h3>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-      </div>
 
-      <!-- Services -->
-      <div class="footer-column">
-        <h3>OUR SERVICES</h3>
-        <a href="services.html">Wedding Photography</a>
-        <a href="services.html">Cinematic Films</a>
-        <a href="services.html">Event Coverage</a>
-        <a href="services.html">Albums &amp; Editing</a>
-      </div>
+        <!-- PROJECT 10 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85" alt="Wedding celebration">
+            </div>
+            <div class="portfolio-info">
+                <span>10 / CELEBRATIONS</span>
+                <h3>Every Moment Matters</h3>
+                <p>Preserving the joy and energy of special occasions.</p>
+            </div>
+        </article>
 
-      <!-- Contact Details -->
-      <div class="footer-column">
-        <h3>CONTACT</h3>
 
-        <a href="tel:+923074120607">
-          +92 307 4120607
-        </a>
+        <!-- PROJECT 11 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=85" alt="Wedding photography details">
+            </div>
+            <div class="portfolio-info">
+                <span>11 / CINEMATIC STORY</span>
+                <h3>Frames Full of Emotion</h3>
+                <p>Visual storytelling through carefully composed frames.</p>
+            </div>
+        </article>
 
-        <a href="https://wa.me/923074120607"
-           target="_blank"
-           rel="noopener noreferrer">
-          WhatsApp
-        </a>
 
-        <p class="footer-address">
-          Punjab, Pakistan
-        </p>
+        <!-- PROJECT 12 -->
+        <article class="portfolio-card">
+            <div class="portfolio-image">
+                <img src="https://bhaveshchauhanphotography.co.uk/wp-content/uploads/2025/10/Kush-Medhavi-Hindu-Wedding-1241.jpg"
+     alt="Wedding photography">
+            <div class="portfolio-info">
+                <span>12 / SPECIAL MOMENTS</span>
+                <h3>Memories Forever</h3>
+                <p>Making every special moment a memory worth keeping.</p>
+            </div>
+        </article>
 
-        <a href="mailto:info.haidristudio@gmail.com">
-         info.haidristudio@gmail.com
-        </a>
-      </div>
+    </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+<section class="portfolio-cta">
+    <span>YOUR STORY / OUR CAMERA</span>
+
+    <h2>Let's Capture Your Beautiful Moments</h2>
+
+    <p>
+        Planning your wedding or special event?
+        Let Haidri Studio turn your moments into timeless memories.
+    </p>
+
+    <a href="https://wa.me/923074120607">
+        Book Your Event ↗
+    </a>
+</section>
+
+
+<!-- FOOTER -->
+ <footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a href="index.html" class="logo" style="color:white;">
+                    HAIDRI<span>STUDIO.</span>
+                </a>
+
+                <p style="margin-top:20px;">
+                    We capture the beauty, emotions and unforgettable
+                    moments of your wedding through photography
+                    and cinematic films.
+                </p>
+            </div>
+
+            <div>
+                <h3>EXPLORE</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+
+            <div>
+                <h3>OUR SERVICES</h3>
+                <p>Wedding Photography</p>
+                <p>Cinematic Films</p>
+                <p>Event Coverage</p>
+                <p>Albums & Editing</p>
+            </div>
+
+            <div>
+                <h3>CONTACT</h3>
+
+                <p>
+                    <a href="tel:+923074120607">+92 307 4120607</a>
+                </p>
+
+                <p>
+                    <a href="https://wa.me/923074120607"
+                       target="_blank"
+                       rel="noopener noreferrer">WhatsApp</a>
+                </p>
+
+                <p>
+                    <a href="mailto:your-email@example.com">
+                        your-email@example.com
+                    </a>
+                </p>
+
+                <p>Punjab, Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Haidri Studio. All rights reserved.</p>
+
+            <p class="footer-credit">
+                Developed by <span>AHM</span>
+            </p>
+
+        </div>
 
     </div>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>
-        © 2026 Haidri Studio. All rights reserved.
-      </p>
-
-
-      <p class="footer-designed">
-        "Developed by <strong>AHM</strong>"
-      </p>
-    </div>
-
-  </div>
 </footer>
+
+<script src="nav-indicator.js" defer></script>
+
 </body>
 </html>

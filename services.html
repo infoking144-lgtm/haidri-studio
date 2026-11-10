@@ -4,542 +4,523 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Our Services | Haidri Studio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <meta name="description" content="Explore wedding photography and cinematic services by Haidri Studio.">
+    <title>Services | Haidri Studio</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* SERVICES PAGE */
-
-        .services-page {
-            background: #090909;
-            color: #f5f5f5;
-            font-family: 'DM Sans', sans-serif;
-        }
-
-        .services-header {
-            min-height: 88px;
-            padding: 20px 6%;
+        .services-hero {
+            min-height: 420px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            border-bottom: 1px solid #292929;
-            background: #090909;
-        }
-
-        .services-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 25px;
-            letter-spacing: 3px;
-            white-space: nowrap;
-        }
-
-        .services-logo span {
-            display: block;
-            margin-top: 5px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 9px;
-            letter-spacing: 2px;
-            color: #aaa;
-        }
-
-        .services-nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-
-        .services-nav a {
-            color: #c5c5c5;
-            font-size: 14px;
-            transition: .3s;
-        }
-
-        .services-nav a:hover,
-        .services-nav a.active {
+            padding: 90px 8%;
+            background: #080808;
             color: #fff;
         }
 
-        .services-book {
-            border: 1px solid #777;
-            border-radius: 30px;
-            padding: 12px 20px;
-            white-space: nowrap;
-        }
-
-        /* HERO */
-
-        .services-hero {
-            padding: 85px 6% 65px;
-            background:
-                linear-gradient(90deg, #090909 35%, #090909cc),
-                url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1600&q=85')
-                center/cover;
-        }
-
-        .services-eyebrow {
+        .services-hero .eyebrow,
+        .services-intro .eyebrow {
+            color: #f47721;
+            letter-spacing: 3px;
             font-size: 12px;
-            letter-spacing: 4px;
-            color: #aaa;
-            margin-bottom: 22px;
+            font-weight: 700;
         }
 
         .services-hero h1 {
-            max-width: 900px;
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(36px, 5vw, 65px);
-            font-weight: 400;
-            line-height: 1.2;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.08;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        .services-hero h1 span {
+            color: #f47721;
         }
 
         .services-hero p {
-            max-width: 650px;
-            color: #b9b9b9;
+            max-width: 550px;
+            color: #bdbdbd;
             line-height: 1.8;
-            margin-top: 20px;
-            font-size: 16px;
         }
 
-        /* SERVICE CARDS */
+        .services-intro {
+            padding: 90px 8%;
+            background: #fff;
+            color: #111;
+            text-align: center;
+        }
+
+        .services-intro h2 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin: 15px 0;
+        }
+
+        .services-intro p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+            line-height: 1.8;
+        }
 
         .services-list {
-            padding: 65px 5.2% 90px;
+            background: #080808;
+            padding: 80px 8%;
+            color: #fff;
+        }
+
+        .services-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-heading span {
+            color: #f47721;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .services-heading h2 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin-top: 15px;
+        }
+
+        .service-items {
+            max-width: 1100px;
+            margin: auto;
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
-        .service-card {
-            display: grid;
-            grid-template-columns: minmax(140px, 42%) 1fr;
-            gap: 25px;
-            align-items: center;
-            padding: 12px;
-            border: 1px solid #303030;
-            border-radius: 7px;
-            background: #101010;
-            transition: .3s;
-            overflow: hidden;
+        .service-item {
+            display: block;
+            text-decoration: none;
+            padding: 35px;
+            border: 1px solid #333;
+            background: #111;
+            transition: .3s ease;
         }
 
-        .service-card:hover {
-            border-color: #888;
-            transform: translateY(-4px);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            filter: grayscale(100%);
-            border-radius: 4px;
-            transition: .4s;
-        }
-
-        .service-card:hover img {
-            filter: grayscale(35%);
-            transform: scale(1.02);
-        }
-
-        .service-info {
-            padding: 15px 10px 15px 0;
+        .service-item:hover {
+            border-color: #f47721;
+            transform: translateY(-5px);
         }
 
         .service-number {
-            color: #858585;
-            font-size: 12px;
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-        }
-
-        .service-info h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: clamp(21px, 2vw, 28px);
-            line-height: 1.3;
-            margin-bottom: 14px;
-        }
-
-        .service-info p {
-            color: #aaa;
+            color: #f47721;
             font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            letter-spacing: 2px;
         }
 
-        .service-link {
-            display: inline-block;
-            padding: 10px 15px;
-            border: 1px solid #656565;
-            border-radius: 5px;
-            font-size: 12px;
-            transition: .3s;
+        .service-item h3 {
+            font-size: 25px;
+            margin: 18px 0 12px;
+            color: #fff;
         }
 
-        .service-link:hover {
-            background: white;
-            color: black;
-        }
-
-        /* BOTTOM CTA */
-
-        .services-cta {
-            padding: 85px 6%;
-            text-align: center;
-            border-top: 1px solid #292929;
-            background: radial-gradient(ellipse at center, #202020, #080808 70%);
-        }
-
-        .services-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            font-size: clamp(30px, 4vw, 48px);
-            margin-bottom: 18px;
-        }
-
-        .services-cta p {
+        .service-item p {
             color: #aaa;
-            margin-bottom: 28px;
+            line-height: 1.8;
         }
 
-        .services-cta a {
-            display: inline-block;
-            background: white;
-            color: black;
-            padding: 14px 25px;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 700;
-            transition: .3s;
-        }
-
-        .services-cta a:hover {
-            background: #ccc;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 900px) {
-            .services-header {
-                flex-wrap: wrap;
-            }
-
-            .services-nav {
-                gap: 16px;
-            }
-
-            .services-list {
+        @media(max-width: 700px) {
+            .service-items {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .services-header {
-                padding: 20px 5%;
-            }
-
-            .services-logo {
-                font-size: 21px;
-            }
-
-            .services-nav {
-                width: 100%;
-                gap: 18px;
-            }
-
-            .services-book {
-                padding: 9px 12px;
             }
 
             .services-hero {
-                padding: 55px 5% 40px;
-            }
-
-            .services-list {
-                padding: 35px 5% 55px;
-                gap: 18px;
-            }
-
-            .service-card {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .service-card img {
-                height: 230px;
-            }
-
-            .service-info {
-                padding: 15px;
+                padding: 75px 7%;
             }
         }
+
+        .site-header .nav-cta {
+            margin-right: 75px;
+        }
+        
+/* HAIDRI STUDIO - OUR FEATURES */
+
+.our-features {
+    background: #080808;
+    color: #fff;
+    padding: 110px 8%;
+}
+
+.features-top {
+    max-width: 750px;
+    margin-bottom: 75px;
+}
+
+.features-top span {
+    color: #f47721;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.features-top h2 {
+    font-size: clamp(42px, 6vw, 72px);
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.features-top h2 strong {
+    color: #f47721;
+}
+
+.features-top p {
+    color: #999;
+    line-height: 1.9;
+    max-width: 550px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    row-gap: 65px;
+    max-width: 1150px;
+}
+
+.feature-content {
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    transition: .3s ease;
+}
+
+.feature-content:hover {
+    border-color: #f47721;
+    transform: translateY(-5px);
+}
+
+.feature-number {
+    color: #f47721;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.feature-content h3 {
+    color: #fff;
+    font-size: 25px;
+    margin: 18px 0;
+    text-transform: capitalize;
+}
+
+.feature-content p {
+    color: #999;
+    font-size: 14px;
+    line-height: 2;
+}
+
+@media(max-width: 700px) {
+    .our-features {
+        padding: 75px 7%;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+        row-gap: 45px;
+    }
+
+    .features-top {
+        margin-bottom: 50px;
+    }
+}
+        .site-header .nav-cta {
+    margin-right: 140px;
+}
     </style>
 </head>
 
-<body class="services-page">
+<body>
 
-    <!-- HEADER -->
+<header class="site-header">
+    <nav class="navbar">
 
-    <header class="services-header">
-
-        <a href="index.html" class="services-logo">
-            HAIDRI STUDIO
-            <span>CAPTURING YOUR SPECIAL MOMENTS</span>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Haidri Studio Logo" class="logo-img">
         </a>
 
-        <nav class="services-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
 
-        <a href="contact.html" class="services-book">
-            Book Now ↗
+            <li class="dropdown">
+                <a href="areas.html">Service Areas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="areas.html#lahore">Lahore</a></li>
+                    <li><a href="areas.html#faisalabad">Faisalabad</a></li>
+                     <li><a href="areas.html#gujrat">Gujrat</a></li>
+                    <li><a href="areas.html#multan">Multan</a></li>
+                    <li><a href="areas.html#rawalpindi">Rawalpindi</a></li>
+                    <li><a href="areas.html#islamabad">Islamabad</a></li>
+                    <li><a href="areas.html#gujranwala">Gujranwala</a></li>
+                    <li><a href="areas.html#sialkot">Sialkot</a></li>
+                    <li><a href="areas.html#bahawalpur">Bahawalpur</a></li>
+                    <li><a href="areas.html#Other City">Other City</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a href="https://wa.me/923074120607" class="nav-cta">
+            Book on WhatsApp ↗
         </a>
 
-    </header>
+    </nav>
+</header>
 
-    <!-- HERO -->
+<main>
 
     <section class="services-hero">
+        <div>
+            <div class="eyebrow">HAIDRI STUDIO / WHAT WE DO</div>
 
-        <div class="services-eyebrow">
-            OUR SERVICES ━━━
+            <h1>
+                Our Services.<br>
+                <span>Your Memories.</span>
+            </h1>
+
+            <p>
+                Professional photography and cinematic wedding
+                services to preserve the moments that matter most.
+            </p>
+        </div>
+    </section>
+
+    <section class="services-intro">
+
+        <div class="eyebrow">OUR EXPERTISE</div>
+
+        <h2>Every Moment Has a Story</h2>
+
+        <p>
+            From the first celebration to the final farewell,
+            we capture your special occasions with creativity,
+            attention to detail and professional care.
+        </p>
+
+    </section>
+
+    <section class="services-list">
+
+        <div class="services-heading">
+            <span>WHAT WE OFFER</span>
+            <h2>Our Services</h2>
         </div>
 
-        <h1>
-            Professional Photography &amp; Videography Services
-        </h1>
+        <div class="service-items">
 
-        <p>
-            We capture your most precious moments with creativity,
-            passion and professional quality.
-        </p>
-
-    </section>
-
-    <!-- SERVICES -->
-
-    <main class="services-list">
-
-        <article class="service-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
-                alt="Wedding photography"
-                loading="lazy"
-            >
-
-            <div class="service-info">
-
+            <a href="wedding-photography.html" class="service-item">
                 <div class="service-number">01 / PHOTOGRAPHY</div>
-
-                <h2>Wedding Photography</h2>
-
+                <h3>Wedding Photography</h3>
                 <p>
-                    Beautiful, candid and timeless photographs
-                    that tell your unique love story.
+                    Beautiful portraits, candid moments and
+                    unforgettable wedding memories.
                 </p>
+            </a>
 
-                <a class="service-link" href="contact.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-        <article class="service-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=85"
-                alt="Professional cinematography"
-                loading="lazy"
-            >
-
-            <div class="service-info">
-
+            <a href="wedding-films.html" class="service-item">
                 <div class="service-number">02 / CINEMATOGRAPHY</div>
-
-                <h2>Wedding Films &amp; Cinematography</h2>
-
+                <h3>Wedding Films & Cinematography</h3>
                 <p>
-                    Cinematic wedding films that bring your
-                    special memories to life.
+                    Cinematic films that capture the emotions,
+                    atmosphere and story of your wedding.
                 </p>
+            </a>
 
-                <a class="service-link" href="contact.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-        <article class="service-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
-                alt="Wedding event setup"
-                loading="lazy"
-            >
-
-            <div class="service-info">
-
+            <a href="event-coverage.html" class="service-item">
                 <div class="service-number">03 / EVENTS</div>
-
-                <h2>Wedding &amp; Event Coverage</h2>
-
+                <h3>Wedding & Event Coverage</h3>
                 <p>
-                    From Mehndi to Baraat and Walima,
-                    we capture every unforgettable moment.
+                    Professional coverage of wedding ceremonies,
+                    family celebrations and special events.
                 </p>
+            </a>
 
-                <a class="service-link" href="contact.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-        <article class="service-card">
-
-            <img
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
-                alt="Wedding memories and photography"
-                loading="lazy"
-            >
-
-            <div class="service-info">
-
-                <div class="service-number">04 / ALBUMS &amp; EDITING</div>
-
-                <h2>Wedding Albums &amp; Editing</h2>
-
+            <a href="wedding-albums.html" class="service-item">
+                <div class="service-number">04 / ALBUMS</div>
+                <h3>Wedding Albums & Editing</h3>
                 <p>
-                    Premium wedding albums and carefully
-                    edited photographs for lasting memories.
+                    Carefully edited photographs and elegant
+                    albums to preserve your memories.
                 </p>
+            </a>
 
-                <a class="service-link" href="contact.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-    </main>
-
-    <!-- CALL TO ACTION -->
-
-    <section class="services-cta">
-
-        <h2>Let's Capture Your Story</h2>
-
-        <p>
-            Have a special event coming up? Let's make it unforgettable.
-        </p>
-
-        <a href="contact.html">BOOK YOUR SESSION ↗</a>
+        </div>
 
     </section>
 
-    <!-- COMMON WEBSITE FOOTER -->
+<!-- OUR FEATURES SECTION -->
+<section class="our-features">
 
-    <footer class="site-footer">
+    <div class="features-top">
+        <span>HAIDRI STUDIO / OUR EXPERTISE</span>
+        <h2>Our <strong>Features</strong></h2>
+        <p>
+            The creativity, passion and professional expertise
+            behind every beautiful moment we capture.
+        </p>
+    </div>
 
-        <div class="footer-container">
+    <div class="features-container">
 
-            <div class="footer-main">
+        <div class="feature-content">
+            <span class="feature-number">01</span>
+            <h3>Light Composure</h3>
+            <p>
+                Light plays an important role in creating
+                beautiful photographs and cinematic films.
+                At Haidri Studio, we carefully use natural
+                and professional lighting techniques to
+                capture every wedding moment with perfect
+                mood, depth and clarity.
+            </p>
+        </div>
 
-                <div class="footer-brand">
+        <div class="feature-content">
+            <span class="feature-number">02</span>
+            <h3>Professional Skills</h3>
+            <p>
+                Our team combines creativity with professional
+                photography and cinematography skills.
+                From capturing candid emotions to producing
+                cinematic wedding films, we focus on delivering
+                beautiful results with attention to every detail.
+            </p>
+        </div>
 
-                    <a href="index.html" class="footer-logo">
-                        HS<span>.</span> HAIDRI STUDIO
-                    </a>
+        <div class="feature-content">
+            <span class="feature-number">03</span>
+            <h3>Perfect Equipment</h3>
+            <p>
+                Great photography needs the right equipment.
+                We use professional cameras, quality lenses,
+                lighting systems and audio equipment to capture
+                your wedding celebrations with excellent
+                visual and audio quality.
+            </p>
+        </div>
 
-                    <p>
-                        We capture the beauty, emotions and unforgettable
-                        moments of your wedding through photography and
-                        cinematic films.
-                    </p>
+        <div class="feature-content">
+            <span class="feature-number">04</span>
+            <h3>Creativity</h3>
+            <p>
+                Every wedding has a unique story worth telling.
+                We bring creative ideas, artistic compositions
+                and cinematic storytelling together to make
+                your wedding photographs and films feel
+                personal, beautiful and unforgettable.
+            </p>
+        </div>
 
-                </div>
+        <div class="feature-content">
+            <span class="feature-number">05</span>
+            <h3>Technical Skills</h3>
+            <p>
+                From camera settings and lighting to
+                professional editing and color grading,
+                we focus on every technical detail.
+                Our goal is to transform every captured
+                moment into a polished and beautiful memory.
+            </p>
+        </div>
 
-                <div class="footer-column">
+        <div class="feature-content">
+            <span class="feature-number">06</span>
+            <h3>Experience</h3>
+            <p>
+                With 25 years of creative experience,
+                Haidri Studio understands the importance
+                of every wedding moment. Our experience
+                helps us capture emotions, celebrations
+                and unforgettable memories with care
+                and professional dedication.
+            </p>
+        </div>
 
-                    <h3>EXPLORE</h3>
+    </div>
 
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Services</a>
-                    <a href="about.html">About Us</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
+</section>
 
-                </div>
+</main>
 
-                <div class="footer-column">
+<footer class="site-footer">
 
-                    <h3>OUR SERVICES</h3>
+    <div class="container">
 
-                    <a href="services.html">Wedding Photography</a>
-                    <a href="services.html">Cinematic Films</a>
-                    <a href="services.html">Event Coverage</a>
-                    <a href="services.html">Albums &amp; Editing</a>
+        <div class="footer-grid">
 
-                </div>
+            <div>
+                <a href="index.html" class="logo" style="color:white;">
+                    HAIDRI<span>STUDIO.</span>
+                </a>
 
-                <div class="footer-column">
+                <p style="margin-top:20px;">
+                    We capture the beauty, emotions and unforgettable
+                    moments of your wedding through photography
+                    and cinematic films.
+                </p>
+            </div>
 
-                    <h3>CONTACT</h3>
+            <div>
+                <h3>EXPLORE</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="portfolio.html">Portfolio</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
 
-                    <a href="tel:+923074120607">
-                        +92 307 4120607
-                    </a>
+            <div>
+                <h3>OUR SERVICES</h3>
+                <p>Wedding Photography</p>
+                <p>Cinematic Films</p>
+                <p>Event Coverage</p>
+                <p>Albums & Editing</p>
+            </div>
 
+            <div>
+                <h3>CONTACT</h3>
+
+                <p>
+                    <a href="tel:+923074120607">+92 307 4120607</a>
+                </p>
+
+                <p>
                     <a href="https://wa.me/923074120607"
                        target="_blank"
-                       rel="noopener noreferrer">
-                        WhatsApp
-                    </a>
-
-                    <p class="footer-address">
-                        Punjab, Pakistan
-                    </p>
-
-                    <a href="mailto:info.haidristudio@gmail.com">
-                       info.haidristudio@gmail.com
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
+                       rel="noopener noreferrer">WhatsApp</a>
+                </p>
 
                 <p>
-                    © 2026 Haidri Studio. All rights reserved.
+                    <a href="mailto:your-email@example.com">
+                        your-email@example.com
+                    </a>
                 </p>
 
-                <p class="footer-designed">
-                   " Developed by <strong>AHM</strong>"
-                </p>
-
+                <p>Punjab, Pakistan</p>
             </div>
 
         </div>
 
-    </footer>
+        <div class="footer-bottom">
+
+            <p>© 2026 Haidri Studio. All rights reserved.</p>
+
+            <p class="footer-credit">
+                Developed by <span>AHM</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="nav-indicator.js" defer></script>
 
 </body>
 </html>
